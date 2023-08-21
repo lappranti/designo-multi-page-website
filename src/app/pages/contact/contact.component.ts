@@ -11,15 +11,15 @@ import { ToggleMenuService } from 'src/app/services/toggle-menu.service';
 export class ContactComponent implements OnInit {
   locationList: Array<any> = [
     {
-      imgUrl: '../../../assets/shared/desktop/illustration-canada.svg',
+      imgUrl: './assets/shared/desktop/illustration-canada.svg',
       name: 'Canada'
     },
     {
-      imgUrl: '../../../assets/shared/desktop/illustration-australia.svg',
+      imgUrl: './assets/shared/desktop/illustration-australia.svg',
       name: 'Autralia'
     },
     {
-      imgUrl: '../../../assets/shared/desktop/illustration-united-kingdom.svg',
+      imgUrl: './assets/shared/desktop/illustration-united-kingdom.svg',
       name: 'United Kingdom'
     }
   ];

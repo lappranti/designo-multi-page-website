@@ -5,7 +5,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 @Component({
   selector: 'app-design',
   templateUrl: './design.component.html',
-  styleUrls: ['./design.component.scss'],
+  styleUrls: ['./design.component.scss']
 })
 export class DesignComponent implements OnInit {
   constructor(
@@ -35,7 +35,7 @@ export class DesignComponent implements OnInit {
 
       this.serviceProjectsIfnos
         .getDesignDetailByName(this.activatedDesign)
-        .subscribe((res) => {
+        .subscribe(res => {
           this.datas = res;
         });
     }
@@ -44,7 +44,7 @@ export class DesignComponent implements OnInit {
   formatAppDesign(design: string) {
     let words = design.split('-');
 
-    let formattedWords = words.map(function (word) {
+    let formattedWords = words.map(function(word) {
       return word.charAt(0).toUpperCase() + word.slice(1);
     });
     return formattedWords.join(' ');
@@ -53,20 +53,20 @@ export class DesignComponent implements OnInit {
   getAllProjectt(currentProjectName: string) {
     this.allProject = [
       {
-        imgUrl: '../../../assets/home/desktop/image-web-design-small.jpg',
+        imgUrl: './assets/home/desktop/image-web-design-small.jpg',
         title: 'WEB DESIGN',
-        class: 'web-design',
+        class: 'web-design'
       },
       {
-        imgUrl: '../../../assets/home/desktop/image-app-design.jpg',
+        imgUrl: './assets/home/desktop/image-app-design.jpg',
         title: 'APP DESIGN',
-        class: 'app-design',
+        class: 'app-design'
       },
       {
-        imgUrl: '../../../assets/home/desktop/image-graphic-design.jpg',
+        imgUrl: './assets/home/desktop/image-graphic-design.jpg',
         title: 'GRAPHIC DESIGN',
-        class: 'graphic-design',
-      },
+        class: 'graphic-design'
+      }
     ];
 
     currentProjectName = currentProjectName.toLocaleUpperCase();

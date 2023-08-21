@@ -30,20 +30,7 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor(private router: Router) {}
-  ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.triggerAnimation', {
-      scrollTrigger: {
-        trigger: '.triggerAnimation',
-        start: '100px',
-        end: '0px',
-        markers: true,
-        toggleActions: 'restart pause reverse pause'
-      },
-      x: -100,
-      duration: 3
-    });
-  }
+  ngOnInit(): void {}
 
   handleGotoDesign(design: string) {
     this.router.navigate(['/design', design]);

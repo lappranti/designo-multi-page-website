@@ -1,0 +1,60 @@
+<div class="fake-content-top" [style.height]="heightElement - 72 + 'px'"></div>
+<div class="wrapper">
+  <div class="content-top" [style.top]="-heightElement + 72 + 'px'">
+    <div class="content">
+      <div class="left">
+        <h2>Let’s talk about your project</h2>
+        <p>
+          Ready to take it to the next level? Contact us today and find out how
+          our expertise can help your business grow.
+        </p>
+      </div>
+      <div class="right">
+        <button (click)="handleGotoContact()">GET IN TOUCH</button>
+      </div>
+    </div>
+  </div>
+  <div class="content-bottom">
+    <div class="content">
+      <div class="nav">
+        <div class="logo">
+          <img src="./assets/shared/desktop/logo-light.png" alt="" />
+        </div>
+        <ul class="link">
+          <li class="link__item">
+            <a routerLink="/about">OUR COMPANY</a>
+          </li>
+          <li class="link__item">
+            <a routerLink="/locations">LOCATIONS</a>
+          </li>
+          <li class="link__item">
+            <a routerLink="contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+      <div class="informations">
+        <div class="texts">
+          <ul class="text">
+            <li class="text__item">Designo Central Office</li>
+            <li class="text__item">3886 Wellington Street</li>
+            <li class="text__item">Toronto, Ontario M9C 3J5</li>
+          </ul>
+
+          <ul class="text">
+            <li class="text__item">Contact Us (Central Office)</li>
+            <li class="text__item">P : +1 253-863-8967</li>
+            <li class="text__item">M : contact@designo.co</li>
+          </ul>
+        </div>
+        <div class="social">
+          <ul class="list">
+            <li class="social__item" *ngFor="let item of socialList">
+              <i [class]="item"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

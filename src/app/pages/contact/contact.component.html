@@ -1,0 +1,60 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="form-container">
+      <div class="description">
+        <h1>Contact Us</h1>
+        <p>
+          Ready to take it to the next level? Let’s talk about your project or
+          idea and find out how we can help your business grow. If you are
+          looking for unique digital experiences that’s relatable to your users,
+          drop us a line.
+        </p>
+      </div>
+      <div class="form-wrapper">
+        <form action="/home">
+          <label for=""
+            ><input type="text" placeholder="Name" required /><span
+              class="errorMessage"
+            ></span
+          ></label>
+          <label for=""
+            ><input type="email" placeholder="Email Address" required /><span
+              class="errorMessage"
+            ></span
+          ></label>
+          <label for=""
+            ><input
+              type="text"
+              placeholder="Phone : XX XXX XX XX"
+              required
+              pattern="[0-9]{7,}" /><span class="errorMessage"></span
+          ></label>
+          <label for="">
+            <textarea
+              type="text"
+              placeholder="Your Message"
+              rows="5"
+              resize="false"
+            ></textarea>
+            <span class="errorMessage"> </span
+          ></label>
+          <div class="form-action">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--LOACTIONS-->
+    <div class="loactions-container">
+      <div class="location" *ngFor="let loaction of locationList">
+        <div class="location__image">
+          <img [src]="loaction.imgUrl" alt="" />
+        </div>
+        <div class="location__text">
+          <h3>{{ loaction.name | uppercase }}</h3>
+          <button (click)="handleGotoLocations()">SEE LOCATION</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+<div class="wrapper">
+  <div class="container">
+    <!--BANNER CONTAINER-->
+    <div class="banner-container">
+      <div class="banner-container__description">
+        <h1>About Us</h1>
+        <p>
+          Founded in 2010, we are a creative agency that produces lasting
+          results for our clients. We’ve partnered with many startups,
+          corporations, and nonprofits alike to craft designs that make real
+          impact. We’re always looking forward to creating brands, products, and
+          digital experiences that connect with our clients’ audiences.
+        </p>
+      </div>
+      <div class="banner-container__image">
+        <img
+          src="./assets/about/desktop/image-about-hero.jpg"
+          alt=""
+          *ngIf="windowSize > 768"
+        />
+        <img
+          src="./assets/about/tablet/image-about-hero.jpg"
+          alt=""
+          *ngIf="windowSize <= 768 && windowSize > 375"
+        />
+        <img
+          src="./assets/about/tablet/image-about-hero.jpg"
+          alt=""
+          *ngIf="windowSize <= 375"
+        />
+      </div>
+    </div>
+    <!--TALENT CONTAINER-->
+    <div class="talent-container">
+      <div class="talent-container__image">
+        <img
+          src="./assets/about/desktop/image-world-class-talent.jpg"
+          alt=""
+          *ngIf="windowSize > 768"
+        />
+        <img
+          src="./assets/about/tablet/image-world-class-talent.jpg"
+          alt=""
+          *ngIf="windowSize <= 768 && windowSize > 375"
+        />
+        <img
+          src="./assets/about/mobile/image-world-class-talent.jpg"
+          alt=""
+          *ngIf="windowSize <= 375"
+        />
+      </div>
+      <div class="talent-container__description">
+        <h2>World-class talent</h2>
+        <p>
+          We are a crew of strategists, problem-solvers, and technologists.
+          Every design is thoughtfully crafted from concept to launch, ensuring
+          success in its given market. We are constantly updating our skills in
+          a myriad of platforms.
+        </p>
+        <p>
+          Our team is multi-disciplinary and we are not merely interested in
+          form — content and meaning are just as important. We give great
+          importance to craftsmanship, service, and prompt delivery. Clients
+          have always been impressed with our high-quality outcomes that
+          encapsulates their brand’s story and mission.
+        </p>
+      </div>
+    </div>
+    <!--LOACTIONS-->
+    <div class="loactions-container">
+      <div class="location" *ngFor="let loaction of locationList">
+        <div class="location__image">
+          <img [src]="loaction.imgUrl" alt="" />
+        </div>
+        <div class="location__text">
+          <h3>{{ loaction.name | uppercase }}</h3>
+          <button (click)="handleGotoLocations()">SEE LOCATION</button>
+        </div>
+      </div>
+    </div>
+    <!--THE REAL DEAL-->
+    <div class="real-deal-container">
+      <div class="real-deal-container__description">
+        <h2>The real deal</h2>
+        <p>
+          We are a crew of strategists, problem-solvers, and technologists.
+          Every design is thoughtfully crafted from concept to launch, ensuring
+          success in its given market. We are constantly updating our skills in
+          a myriad of platforms.
+        </p>
+        <p>
+          Our team is multi-disciplinary and we are not merely interested in
+          form — content and meaning are just as important. We give great
+          importance to craftsmanship, service, and prompt delivery. Clients
+          have always been impressed with our high-quality outcomes that
+          encapsulates their brand’s story and mission.
+        </p>
+      </div>
+      <div class="real-deal-container__image">
+        <img
+          src="./assets/about/desktop/image-real-deal.jpg"
+          alt=""
+          *ngIf="windowSize > 768"
+        />
+        <img
+          src="./assets/about/tablet/image-real-deal.jpg"
+          alt=""
+          *ngIf="windowSize <= 768 && windowSize > 375"
+        />
+        <img
+          src="./assets/about/mobile/image-real-deal.jpg"
+          alt=""
+          *ngIf="windowSize <= 375"
+        />
+      </div>
+    </div>
+  </div>
+</div>

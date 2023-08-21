@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <div class="container">
+    <!--*************************-->
+    <div class="banniere">
+      <h1 class="title">{{ formatedWord }}</h1>
+      <p class="text" *ngIf="activatedDesign === 'web-design'">
+        We build websites that serve as powerful marketing tools and bring
+        memorable brand experiences.
+      </p>
+      <p class="text" *ngIf="activatedDesign === 'app-design'">
+        Our mobile designs bring intuitive digital solutions to your customers
+        right at their fingertips.
+      </p>
+      <p class="text" *ngIf="activatedDesign === 'graphic-design'">
+        We deliver eye-catching branding materials that are tailored to meet
+        your business objectives.
+      </p>
+    </div>
+    <!--###################################-->
+    <div class="projects-container">
+      <div class="project" *ngFor="let project of datas">
+        <div class="project__image">
+          <img [src]="project.imgUrl" alt="" />
+        </div>
+        <div class="project__description description">
+          <h3 class="title">{{ project.title }}</h3>
+          <p class="text">{{ project.text }}</p>
+        </div>
+      </div>
+    </div>
+    <!--## THES OTHERS PROJECTS ###-->
+    <div class="others-project-container">
+      <div
+        class="project"
+        *ngFor="let proj of othtersProject"
+        [ngClass]="proj.class"
+        (click)="handleGotoProject(proj.class)"
+      >
+        <h2>{{ proj.title }}</h2>
+        <button>
+          <span>VIEW PROJECTS</span>
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

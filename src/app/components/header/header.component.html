@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="logo" (click)="handleGotoHome()">
+      <img src="./assets/shared/desktop/logo-dark.png" alt="" />
+    </div>
+    <ul class="link">
+      <li class="link__item">
+        <a routerLink="/about" routerLinkActive="active">OUR COMPANY</a>
+      </li>
+      <li class="link__item">
+        <a routerLink="/locations" routerLinkActive="active">LOCATIONS</a>
+      </li>
+      <li class="link__item">
+        <a routerLink="contact" routerLinkActive="active">CONTACT</a>
+      </li>
+    </ul>
+    <span
+      class="btn-toggle-menu"
+      (click)="handleToggleMenuMobile()"
+      *ngIf="!isMenuToggle"
+    >
+      <img src="./assets/shared/mobile/icon-hamburger.svg" alt="" />
+    </span>
+    <span
+      class="btn-toggle-menu"
+      (click)="handleToggleMenuMobile()"
+      *ngIf="isMenuToggle"
+    >
+      <img src="./assets/shared/mobile/icon-close.svg" alt="" />
+    </span>
+  </div>
+  <div class="modal" *ngIf="isMenuToggle">
+    <ul class="modal__content link">
+      <li class="link__item">
+        <a (click)="handleSelectMenuMobile('about')" routerLinkActive="active"
+          >OUR COMPANY</a
+        >
+      </li>
+      <li class="link__item">
+        <a
+          (click)="handleSelectMenuMobile('locations')"
+          routerLinkActive="active"
+          >LOCATIONS</a
+        >
+      </li>
+      <li class="link__item">
+        <a (click)="handleSelectMenuMobile('contact')" routerLinkActive="active"
+          >CONTACT</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

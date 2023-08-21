@@ -1,0 +1,116 @@
+@import "../../helpers/styled";
+.wrapper {
+  width: 100%;
+  height: calc(64 * 2 + 27) * 1px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0 toRem(40);
+  position: relative;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 0 24px;
+  }
+}
+.container {
+  width: $desktop;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    height: 27px;
+    width: 202px;
+    cursor: pointer;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(42);
+
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: #333136;
+
+      letter-spacing: 2px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  .btn-toggle-menu {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .link {
+      column-gap: 24px;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .link {
+      column-gap: 24px;
+      display: none;
+    }
+
+    .btn-toggle-menu {
+      display: block;
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: calc(64 * 2 + 27) * 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #00000090;
+  z-index: 99;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    width: 100%;
+    padding: 48px 40px;
+    background-color: $black;
+
+    a {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 25px;
+
+      letter-spacing: 2px;
+      color: $white;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover,
+      &.active {
+        text-decoration: underline;
+      }
+    }
+    @media only screen and (max-width: $mobile) {
+      padding: 48px 24px;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    display: block;
+  }
+}

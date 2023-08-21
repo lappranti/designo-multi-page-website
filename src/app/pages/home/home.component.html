@@ -1,0 +1,48 @@
+<div class="wrapper">
+  <div class="container">
+    <!--BANNIERE-->
+    <div class="banniere-container">
+      <div class="banniere-container__text">
+        <h1>Award-winning custom designs and digital branding solutions</h1>
+        <p>
+          With over 10 years in the industry, we are experienced in creating
+          fully responsive websites, app design, and engaging brand experiences.
+          Find out more about our services.
+        </p>
+        <button (click)="handleGotoAbout()">LEARN MORE</button>
+      </div>
+      <div class="banniere-container__image triggerAnimation">
+        <img src="./assets/home/desktop/image-hero-phone.png" alt="" />
+      </div>
+    </div>
+    <!--PROJETS-->
+    <div class="projet-container">
+      <div class="left" (click)="handleGotoDesign('web-design')">
+        <h1>WEB DESIGN</h1>
+        <h3><span>VIEW PROJECTS</span><i class="bi bi-chevron-right"></i></h3>
+      </div>
+      <div class="right">
+        <div class="top" (click)="handleGotoDesign('app-design')">
+          <h1>APP DESIGN</h1>
+          <h3><span>VIEW PROJECTS</span><i class="bi bi-chevron-right"></i></h3>
+        </div>
+        <div class="bottom" (click)="handleGotoDesign('graphic-design')">
+          <h1>GRAPHIC DESIGN</h1>
+          <h3><span>VIEW PROJECTS</span><i class="bi bi-chevron-right"></i></h3>
+        </div>
+      </div>
+    </div>
+    <!--SERVICES-->
+    <div class="services-container">
+      <div class="service" *ngFor="let service of serviceList">
+        <div class="image">
+          <img [src]="service.img" alt="" />
+        </div>
+        <div class="text">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

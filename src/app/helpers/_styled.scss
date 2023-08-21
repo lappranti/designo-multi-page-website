@@ -1,0 +1,44 @@
+//### FUNCTION
+
+@function toRem($val) {
+  @return calc($val / 16) * 1rem;
+}
+
+//## LAYOUTS
+
+$desktop: toRem(1111);
+$tablette: toRem(768);
+$mobile: toRem(400);
+
+//## COLORS
+//**** PRIMARY COLORS *****//
+$peach: #e7816b;
+$black: #1d1c1e;
+$white: #ffff;
+//**** SECONDARY ****//
+$ligh-peach: #ffad9b;
+$dark-grey: #333136;
+$light-grey: #f1f3f5;
+
+//### TYPOGRAPHY
+
+@mixin typo($type) {
+  font-weight: 500;
+  font-style: normal;
+  @if ($type== "h1") {
+    font-size: 48px;
+    line-height: 48px;
+  } @else if($type== "h2") {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2px;
+  } @else if($type== "h3") {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 5px;
+  } @else {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
